@@ -4,7 +4,12 @@ $(document).ready(function() {
   // on click show given animal content and hide other content
   // snake button
   $('button#snakeBtn').click(function() {
-    alert('Your snake button works!');
+    // alert('Your snake button works!');
+    // add sibling classes hidden
+    $('.snake').siblings().addClass('hidden');
+    // remove class hidden from chosen animal
+    $('.snake').removeClass('hidden');
+
   });
   // turtle button
   $('button#turtleBtn').click(function() {
