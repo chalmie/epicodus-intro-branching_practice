@@ -13,11 +13,18 @@ $(document).ready(function() {
   });
   // turtle button
   $('button#turtleBtn').click(function() {
+     turtleLove = confirm("Do you love turtes? OK for yes, Cancel for no");
 
-    // add sibling classes hidden
-    $('.turtle').siblings().addClass('hidden');
-    // remove class hidden from chosen animal
-    $('.turtle').removeClass('hidden');
+    if (turtleLove) {
+      // add sibling classes hidden
+      $('.turtle').siblings().addClass('hidden');
+      // remove class hidden from chosen animal
+      $('.turtle').removeClass('hidden');
+    } else {
+      $('.turtle').addClass('hidden');
+      alert("You don't deserve to learn about turtles!");
+    };
+
   });
   // insecta button
   $('button#insectsBtn').click(function() {
